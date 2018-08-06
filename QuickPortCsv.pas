@@ -247,7 +247,7 @@ Begin
 
     SchWire := SchServer.SchObjectFactory(eWire,eCreate_GlobalCopy);
     If SchWire = Nil Then Exit;
-    //LineWidth := eSmall;
+    // LineWidth := eSmall;
     // but this should be value , small
     SchWire.SetState_LineWidth := eSmall;
     Schwire.VerticesCount := 0;
@@ -277,21 +277,19 @@ Begin
     // justIfication and orientation and start point.
     Case Side of
         1: LabelX := MiddleX + LabelGap;
-        2: LabelY := EndY - LabelGap;
+        2: LabelY := MiddleY + LabelGap;
         3: LabelX := EndX + LabelGap;
-        4: LabelY := MiddleY - LabelGap;
+        4: LabelY := EndY + LabelGap;
         End;
-    //LabelX := MiddleX + EndGap;
-    //LabelY := MiddleY + EndGap;
     SchNetlabel.Location    := Point(MilsToCoord(LabelX), MilsToCoord(LabelY));
     SchNetlabel.Text        := NetName;
     SchNetlabel.Orientation := eRotate0;
     Case Side of
         1: SchNetlabel.Orientation := eRotate0;
-        2: SchNetlabel.Orientation := eRotate270;
+        2: SchNetlabel.Orientation := eRotate90;
         3: SchNetlabel.Orientation := eRotate0;
         {3: SchNetlabel.JustIfication := eJustIfy_BottomLeft;}
-        4: SchNetlabel.Orientation := eRotate270;
+        4: SchNetlabel.Orientation := eRotate90;
         else SchNetlabel.Orientation := eRotate0;
         end;
     SchDoc.RegisterSchObjectInContainer(SchNetlabel);
@@ -553,7 +551,7 @@ Begin
                 2 : EachSideIter[__right,__posY] := pinY + 100;
                 3 : EachSideIter[__top,__posX] := pinX - 100;
             End;
-            //CreatePin(pinX,pinY,pinSide+1,WireLen,rowstore[i][Idx_PortLabel],rowstore[i][Idx_NetLabel]);
+
             If GetVisibleState(rowstore[i][Idx_VisibleOpt]) = 1 Then
             Begin
 
@@ -594,7 +592,7 @@ Begin
 }
     {.... First Init .... }
     MessageClean();
-    // demo code                        \
+    // demo code
     PlaceViaCsv('C:\demo.csv');
     //CreatePin(100,-100,4,300,'dummy1','dm1', 0);
     //CreatePin(500,-600,2,300,'dummy2','dm2', 0);

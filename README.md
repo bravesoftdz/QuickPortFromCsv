@@ -1,8 +1,8 @@
 # QuickPortFromCsv
 
 This Delphi Script for EDA workers.
-![demo](demo.png)
-Just Like this pictures.
+![demo](./demo/hello.png)
+Just Like this pictures. (Quad Side Demo)
 
 Feature
 --------------------
@@ -10,7 +10,7 @@ Create Pin and Port
 * Ignore specific row by writing 'X' in col F.
 * Seperate Port Label and Net Label.
 * Auto size decision for Port and Wire (10pt New Romans).
-* Quad Side for each pin by writing 'L,B,R,T' in col E.
+* Quad Side for each pin by writing 'L,B,R,T' in col E. (1,2,3,4 Sides available)
 * Getting start location from col:0, x-row:F, y-row:G
 * example CSV file 'demo.csv'
 * Something Else ...
@@ -33,3 +33,9 @@ Because I need to change some pin mux with same MCU or little different MCU from
 ### contacts : pmnxis@gmail.com
 ### License : MIT License
 
+ Another demo
+---------------------
+### Quad Side
+![demo](./demo/demo.png)
+### Dual Side
+![demo2](./demo/demo2.png)
