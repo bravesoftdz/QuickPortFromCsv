@@ -1,7 +1,7 @@
 # QuickPortFromCsv
 
 This Delphi Script for EDA workers.
-![demo](./demo/hello.png)
+![demo](./demo/hello.PNG)
 Just Like this pictures. (Quad Side Demo)
 
 Feature
